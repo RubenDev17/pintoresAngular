@@ -1,0 +1,29 @@
+<body>
+    <div>
+        <h1 class="text-center">Mi Empresa</h1>
+        <br>
+        <p class="textoParrafo introduccion text-center">Aqui tiene todos los datos del pintor seleccionado</p>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center"> 
+            <div class="alert alert-success col-md-12" role="alert">
+                Numero: {{datospintor.id}}
+            </div>
+            <div class="alert alert-success col-md-12" role="alert">
+                Nombre: {{datospintor.nombre}}
+            </div>
+            <div class="alert alert-success col-md-12" role="alert">
+                Apellido: {{datospintor.apellidos}}
+            </div>
+            <div class="alert alert-success col-md-12" role="alert">
+                Sueldo: {{datospintor.sueldo}}€
+            </div>
+            <div class="alert alert-success col-md-12" role="alert">
+                Años de experiencia: {{datospintor.experiencia}}
+            </div>
+            <div>
+                <button type="button" class="btn btn-success ml-auto" routerLink='/home'>Volver al home</button>
+            </div>
+        </div>
+    </div>
+</body>

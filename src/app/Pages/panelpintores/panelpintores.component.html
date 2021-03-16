@@ -1,0 +1,40 @@
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="justify-content-center col-md-12"> 
+              <h1 class="text-center">Mi Empresa</h1>
+              <br>
+              <p class="introduccion">Bienvenido al panel de administración, desde aqui puede crear o eliminar ofertas</p>
+            </div>
+            <div>
+              <button type="button" class="btn btn-success ml-auto" routerLink="/nuevopintor">Crear nuevo pintor</button>
+            </div>
+            <table class="table justify-content-center">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Sueldo</th>
+                    <th scope="col">Experiencia</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let pintor of this.pintores">
+                    <th scope="row">{{pintor.id}}</th>
+                    <td>{{pintor.nombre}}</td>
+                    <td>{{pintor.apellidos}}</td>
+                    <td>{{pintor.sueldo}} €</td>
+                    <td>{{pintor.experiencia}} años</td>
+                    <td><button type="button" class="btn btn-danger ml-auto" (click)="eliminarPintor(pintor.id)" >Eliminar</button></td>
+                    <td><button type="button" class="btn btn-warning ml-auto" (click)="modificarPintor(pintor.id)" >Modificar</button></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div>
+                <button type="button" class="btn btn-success" routerLink="/home">Volver al home</button>
+              </div>
+        </div>
+    </div>
+  </body>

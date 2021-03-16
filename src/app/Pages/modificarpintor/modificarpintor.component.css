@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;800&family=Rock+Salt&display=swap');
+body{
+    background-color: #003B0C;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    width: 50%;
+  }
+
+h1{
+    font-family: 'Rock Salt', cursive;
+    font-size: 4rem;
+    color: white;
+}
+
+.introduccion{
+  font-size: 1.2rem;
+  font-family: 'Inconsolata', monospace;
+  color: white;
+}
+
+.titulos{
+  font-family: 'Inconsolata', monospace;
+  color: white;
+}
+
+input{
+  width: 100vh;
+}
+
+.colorError{
+  color:red;
+}
+
+button{
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
+
+a{
+  margin-bottom: 15px;
+  margin-left: 15px;
+}

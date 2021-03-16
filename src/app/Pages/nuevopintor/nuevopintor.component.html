@@ -1,0 +1,35 @@
+<body>
+    <div class="container">
+        <div class="row"> 
+            <div class="justify-content-center col-md-12"> 
+                <h1 class="text-center">MundoOferta</h1>
+                <br>
+                <p class="introduccion">Rellene los campos adecuadamente para crear un pintor</p>
+              </div>
+            <form #pintor="ngForm" (ngSubmit)="onSubmit(pintor)">
+                <div class="form-group col-md-12">
+                    <label class="titulos">Nombre* &nbsp; &nbsp;</label>
+                    <label class="colorError" *ngIf="!this.nombreExcesivo">{{msgErrorNombre}}</label>
+                    <input type="text" class="form-control" name ="nombre" #nombre [(ngModel)]="pintorModel.nombre" required>
+                    </div>
+                <div class="form-group col-md-12">
+                    <label class="titulos">Apellidos* &nbsp; &nbsp;</label>
+                    <label class="colorError" *ngIf="!this.apellidosExcesivo">{{msgErrorApellidos}}</label>
+                    <input type="text" class="form-control" name="apellidos" #apellidos [(ngModel)]="pintorModel.apellidos" required>
+                </div>
+                <div class="form-group col-md-12">
+                    <label class="titulos">Sueldo* &nbsp; &nbsp;</label>
+                    <label class="colorError" *ngIf="!this.sueldoExcesivo">{{msgErrorSueldo}}</label>
+                    <input type="number" class="form-control" name="sueldo" #sueldo [(ngModel)]="pintorModel.sueldo" required>
+                </div>
+                <div class="form-group col-md-12">
+                    <label class="titulos">Experiencia*</label>
+                    <input type="number" class="form-control" name="experiencia" #experiencia [(ngModel)]="pintorModel.experiencia" required>
+                </div>
+                <button type="submit" class="btn btn-success" [disabled]="!pintor.form.valid" >Crear pintor</button>
+                <br>
+                <a type="button" class="btn btn-success" routerLink="/panelpintores" >Volver atrás</a>
+            </form>
+        </div>
+    </div>
+</body>

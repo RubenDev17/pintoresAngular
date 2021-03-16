@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;800&family=Rock+Salt&display=swap');
+body{
+    background-color: #003B0C;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h1{
+    font-family: 'Rock Salt', cursive;
+    font-size: 4rem;
+    color: white;
+}
+
+.introduccion{
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+}
+.textoParrafo{
+    font-family: 'Inconsolata', monospace;
+    color: white;
+}
